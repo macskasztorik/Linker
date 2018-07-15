@@ -1,5 +1,5 @@
 # Linker
-Demo project - simple redirection and link shortener service
+Demo project - simple redirection and link shortener service - Made with **Spring Boot**
 
 ## How does it work?
 
