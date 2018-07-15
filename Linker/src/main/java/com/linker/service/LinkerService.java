@@ -36,11 +36,11 @@ public class LinkerService {
 		}
 
 		//Otherwise we will generate a new encoded version
-		String newShortLink = RandomStringUtils.randomAlphanumeric(8); 
+		String newShortLink = RandomStringUtils.randomAlphanumeric(8).toLowerCase(); 
 		checkUnique = linkRepository.findFirstByShortLink(newShortLink);
 	
 		while (checkUnique != null) {
-			newShortLink = RandomStringUtils.randomAlphanumeric(8);
+			newShortLink = RandomStringUtils.randomAlphanumeric(8).toLowerCase();
 			checkUnique = linkRepository.findFirstByShortLink(newShortLink);
 		}
 		

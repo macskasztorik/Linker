@@ -12,6 +12,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" th:href="@{assets/css/main.css}"  />
 		<link rel="stylesheet" href="assets/css/noscript.css" th:href="@{assets/css/noscript.css}"/>
+		<link rel="stylesheet" href="assets/css/toastr.min.css" th:href="@{assets/css/toastr.min.css}"/>
+		
+		<script type="text/javascript" src="assets/js/jquery.min.js" th:src="@{assets/js/jquery.min.js}"></script>
+		<script type="text/javascript" src="assets/js/toastr.min.js" th:src="@{assets/js/toastr.min.js}"></script>
+		<script type="text/javascript" src="assets/js/procedure.js" th:src="@{assets/js/procedure.js}"></script>
 	</head>
 	<body class="is-preload">
 
@@ -27,23 +32,26 @@
 						</header>
 						
 						<hr />
-						<form method="post" action="#">
 							<div class="fields">
 								<div class="field">
-									<input type="text" name="name" id="name" placeholder="Long link" />
+									<input type="text" name="originalLink" id="originalLink" placeholder="Long link" />
 								</div>
 							</div>
 							<ul class="actions special">
-								<li><a href="#" class="button">Give my new link!</a></li>
+								<li><a id="linkGeneratorButton" class="button">Give my new link!</a></li>
 							</ul>
-						</form>
 						<hr />
+						
+						
+						<div id="links">
+						
+						</div>
 					</section>
 
 				<!-- Footer -->
 					<footer id="footer">
 						<ul class="copyright">
-							<li>&copy; Krisztian Heisz</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>&copy; Krisztian Heisz</li><li>Design based on a template from: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</footer>
 

@@ -1,7 +1,5 @@
 package com.linker.controller;
 
-import java.util.List;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -53,8 +51,8 @@ public class LinkerController {
 
 	
 	
-	//**Support functions for Controllers*/
 	public static JSONObject requestJsonValidation(String payload) {
+	//**Support functions for Controllers*/
 		JSONObject requestBodyJson = new JSONObject();
 		
 		try {
@@ -69,6 +67,17 @@ public class LinkerController {
 				requestBodyJson.put("error", "Request's body has wrong format - JSON is expected");
 			} catch (JSONException e) {
 				System.out.println("Issue with putting values to the JSON object"); // will change to logger
+			}
+		}else{
+			int sizeOfOriginalLink = 0;
+			try {
+				sizeOfOriginalLink = requestBodyJson.getString("shortLink").length();
+				if ( sizeOfOriginalLink > 255){
+					requestBodyJson.put("status", "error");
+					requestBodyJson.put("error", "Original Link is too long");
+				}
+			} catch (JSONException e) {
+				System.out.println("Couldn't measure the size of the original Link");
 			}
 		}
 		return requestBodyJson;
