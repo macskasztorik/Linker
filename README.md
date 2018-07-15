@@ -29,3 +29,16 @@ src\main\resources\static\assets\js\procedure.js
 ## How can it be improved ##
 Since it was a task with a limited on it, I used frameworks which I could work quickly with. The project uses JPA over JDBC, and H2 embedded database over an external DB. If that would go live, I would have used Stored Procedures on PostgreSQL, and I would just call them from the server. There is no security on this service at the moment, but on a live system I would build a user authentication (so the links would not be stored in the Local Storage of the browser, but rather it would be attached to the user itself) using JWT tokens. On the Front End I would be using React over jQuery, but again: for a small task like that, that was much quicker to build.
 
+## How to run it locally ##
+There is a running version (I will shut it down in few days) in the following link: **http://167.99.33.217:8080/**
+
+To run the project locally, checkout the repository, go to the target/ folder, and then type:
+
+> java -jar linker-0.1.jar
+
+If you would like to rebuild the project, just go to the main project folder, and type:
+
+> mvn clean install 
+
+This will create a new .jar file.
+
