@@ -1,1 +1,0 @@
-INSERT INTO LINKS (id, original_link, short_link) VALUES (1,'tester','test');

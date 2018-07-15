@@ -23,6 +23,11 @@ public class Link {
 	public Link() {
 
 	}
+	
+	public Link(String originalLink, String shortLink) {
+		this.originalLink = originalLink;
+		this.shortLink = shortLink;
+	}
 
 	public Link(Long id, String originalLink, String shortLink) {
 		super();

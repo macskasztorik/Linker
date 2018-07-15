@@ -9,5 +9,7 @@ import com.linker.domain.Link;
 public interface LinkRepository extends CrudRepository<Link, Long> {
 	
 	Link findFirstByShortLink(String shortlink);
+	
+	Link findFirstByOriginalLink(String originalLink);
 
 }
